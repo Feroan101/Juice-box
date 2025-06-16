@@ -55,12 +55,6 @@ h1{
     margin-bottom: 0.5rem;
 }
 
-.card #subh{
-    padding: 0;
-    font-size: 1rem;
-    margin: 0;
-}
-
 .card p{
     font-size: 1rem;
     color: #444;
@@ -111,4 +105,10 @@ h1{
     margin: 5px;
     color: red;
     font-family: 'Quicksand', sans-serif;
+}
+
+@media (max-width: 600px) {
+  #waste {
+    font-size: 0.8rem;
+  }
 }
