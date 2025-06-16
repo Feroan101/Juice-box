@@ -1,11 +1,13 @@
 body{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
 
+    margin: 0;
+    padding: 0;
     min-height: 100vh; 
-    width: 100%;
+    width: 100vw;
     overflow-y: hidden;
     overflow-x: hidden;
     background-color: rgb(147, 147, 212);
@@ -33,14 +35,15 @@ h1{
 .card{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+    box-sizing: border-box;
     padding: 1.5rem 2rem;
     margin: 1rem auto;
+    width: 90vw;
     max-width: 400px;
     height: auto;
 }
@@ -77,12 +80,14 @@ h1{
 .card .inp{
     font-family: 'Quicksand', sans-serif;
     border: none;
-    width: auto;
     border-radius: 12px;
     padding: 10px;
-    width: 300px;
-    height: 30px;
-    margin: 15px;
+    width: 100%; /* take full width of parent */
+    max-width: 280px; /* don't exceed this */
+    height: 40px;
+    margin: 10px auto; /* center horizontally */
+    display: block;
+    box-sizing: border-box;
 }
 
 .card button{
