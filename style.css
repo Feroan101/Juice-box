@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    min-height: 100vh; 
+    width: 100%;
+    overflow-y: hidden;
+    background: linear-gradient(250deg, #e0c3fc,#8ec5fc);
+}
+
+.video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+.card .foot{
+    justify-self: flex-end;
+}
+
+h1{
+    font-family: 'Great Vibes', cursive;
+    color: #333;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    margin: 1rem auto;
+    max-width: 400px;
+    height: auto;
+}
+
+.card h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #5e5b9d;
+    margin-bottom: 0.5rem;
+}
+
+.card #subh{
+    padding: 0;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.card p{
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.card a{
+    font-family: 'Share Tech Mono', monospace;
+    align-self: center;
+    font-size: 1rem;
+    color:#5e5b9d;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.card .inp{
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    width: auto;
+    border-radius: 12px;
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+    margin: 15px;
+}
+
+.card button{
+    font-family: 'Poppins', sans-serif;
+    background: #b095f6;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.3 ease;
+}
+
+.card button:hover{
+    background: #d0bfff;
+}
+
+#waste{
+    margin: 5px;
+    color: red;
+    font-family: 'Quicksand', sans-serif;
+}

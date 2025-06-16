@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T9 Encryption Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&family=Quicksand&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <video autoplay muted loop class="video-bg">
+    <source src="https://videocdn.cdnpk.net/videos/1d952cf5-2685-54cc-959a-c61272ecab6c/horizontal/previews/clear/large.mp4?token=exp=1750078701~hmac=313db912b4b5c46ac64236d273aaa3ef113a68f84f374b985328ec88fd939f4f" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+    <h1>Blank, Almost.</h1>
+    <div class="card">
+        <h2>Login</h2>
+        <p id="subh"></p>
+        <input id="username" class="inp" type="text" placeholder="Enter Name" required/>
+        <input id="pass" class="inp" type="text" pattern="[0-9]*" maxlength="4" placeholder="Enter Pin" required/>
+
+        <a onclick="forget()" id="forget">forgot password?</a>
+        <button onclick="submit()" type="button">Get Started</button>
+        <div id="waste"></div>
+        <p class="foot">Made By <a href="https://github.com/Feroan101" style="color: blueviolet; cursor: pointer; margin: 0; font-family: 'Times New Roman', Times, serif;">Feroan</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
