@@ -2,7 +2,7 @@ let attempt = 0;
 
 function forget(){
     let item = document.getElementById("forget");
-    item.innerHTML = "HINT: What would your name feel like on a <br><em>flip phone</em>?";
+    item.innerHTML = "HINT: What would your name feel like on a <em>flip phone</em>?";
     item.style.textAlign = "center"
 
     item.style.cursor = "text";
