@@ -16,7 +16,7 @@ function submit(){
         document.getElementById("waste").innerHTML = "<b>Enter Your Name</b>"
     }
 
-    else if (pass !== "3326"){
+    else if (pass !== "7474"){
         let waste = document.getElementById("waste")
         attempt += 1;
         waste.innerHTML = 'Wrong Password';
