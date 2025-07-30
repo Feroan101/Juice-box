@@ -1,0 +1,243 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: rgb(251, 200, 200);
+}
+
+.main{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(18, 64, 95);
+    position: relative;
+}
+
+.opts-con{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    width: 100%;
+    height: 15%;
+    border-top: 2px solid rgb(0, 0, 0);
+    box-shadow: inset 0 0 4px black;
+    justify-self: flex-end;
+    margin-left: auto;
+    margin-top: auto;
+    background-color: rgba(180, 180, 180, 0.5);
+
+    top: 85%;
+    left: auto;
+    z-index: 1;
+}
+
+.left{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    border: 3px solid black;
+    box-shadow:inset 0 0 0 2px gold, inset 3px 0 0 6px gray, inset -3px 0 0 6px gray;
+    align-self: center;
+}
+
+.what{
+    align-self: center;
+    margin-left: 10%;
+    justify-content: flex-start;
+    font-size: 15px;
+    font-family: monospace;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.opts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 70px;
+    border: 4px solid black;
+    text-shadow: -1px -1px 0 black, 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black;
+    border-radius: 15px;
+    font-size: 20px;
+    font-family: monospace;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.right{
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;   
+}
+
+#fight{
+    background: linear-gradient(to bottom, red, rgb(133, 0, 0));
+    border: 4px solid rgb(92, 0, 0);
+    box-shadow: inset 0 0 0 2px white;
+}
+
+#bag{
+    background: linear-gradient(to bottom, rgb(0, 236, 0), rgb(0, 82, 0));
+    border: 4px solid rgb(0, 92, 0);
+    box-shadow: inset 0 0 0 2px white;
+}
+
+#Switch{
+    background: linear-gradient(to bottom, yellow, rgb(112, 112, 12));
+    border: 4px solid rgb(92, 92, 0);
+    box-shadow: inset 0 0 0 2px white;
+}
+
+#run{
+    background: linear-gradient(to bottom, blue, rgb(0, 0, 110));
+    border: 4px solid rgb(0, 0, 92);
+    box-shadow: inset 0 0 0 2px white;
+}
+
+/*Player stats*/
+
+.player{
+    width: 60%;
+    background-color: azure;
+    padding: 10px;
+    font-family: monospace;
+    background: linear-gradient(-135deg, rgb(236, 236, 236) 40%, rgb(189, 189, 189));
+    box-shadow: inset 0 0 5px black;
+    border: 3px solid black;
+}
+
+h6{
+    padding: 0;
+    margin: 0;
+    font-size: 18px ;
+}
+
+.stats-p{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px 0;
+    height: 100%;
+    width: 100%;
+}
+
+#bar{
+    height: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 95%;
+    background-color: rgb(226, 226, 226);
+    position: relative;
+}
+
+.hp{font-weight: 600;}
+
+.health{
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to bottom, rgb(0, 200, 0), rgb(0, 100, 0));
+}
+
+.stats-e{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px 0;
+    height: 100%;
+    width: 100%;
+}
+
+.enemy{
+    width: 60%;
+    align-self: flex-start;
+    justify-self:flex-start ;
+}
+
+.fight-overlay{
+    gap: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    width: 100%;
+    height: 15%;
+    border-top: 2px solid rgb(0, 0, 0);
+    box-shadow: inset 0 0 4px black;
+
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(180, 180, 180, 1);
+    position: absolute;
+    display: flex;
+}
+
+.fight-overlay .opts{
+    background:linear-gradient(to bottom, rgb(216, 216, 216),rgb(121, 121, 121));
+    font-size: 10px;
+    height: 25px;
+    width: 90px;
+}
+
+.whole{
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    gap: 2px;
+
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr; 
+}
+
+.close{
+    position: absolute; 
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff2020;
+    font-weight: bold;
+    background: none;
+}
+
+#move1{
+    background: linear-gradient(135deg,#111111,#2c2c2c );
+    box-shadow: inset 0 0 0 1px #ffffff;
+    border-color: #141414;
+}
+
+#move2{
+    background: linear-gradient(135deg,#a12626,#ff3d3d );
+    box-shadow: inset 0 0 0 1px #ffffff;
+    border-color: #491010;
+}
+
+#move3{
+    background: linear-gradient(135deg,#2e2763,#6c5ce7 );
+    box-shadow: inset 0 0 0 1px #ffffff;
+    border-color: #252051;
+}
+
+#move4{
+    background: linear-gradient(135deg,#83405e,#ff7eb9 );
+    box-shadow: inset 0 0 0 1px #ffffff;
+    border-color: #623047;
+}

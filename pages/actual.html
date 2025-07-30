@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="actual.css" />
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <title>Game</title>
+</head>
+<body>
+    <div class="main">
+        <!--DEFAULT SCREEN-->
+        <div class="stats-e">
+            <div class="enemy player">
+                <h6>Default-enemy</h6>
+                <div>Lv.100</div>
+                <div id="bar"><div id="e-health" class="health"></div></div>
+                <div id="e-hp" class="hp">HP: 100/100</div>
+            </div>
+        </div>
+        
+        <div class="stats-p">
+            <div class="player">
+                <h6 id="p-name">Default-Player</h6>
+                <div>Lv.69</div>
+                <div id="bar"><div id="p-health" class="health"></div></div>
+                <div id="p-hp" class="hp">HP: 100/100</div>
+            </div>
+        </div>
+        
+        <div class="opts-con">
+            <div class="left"><div class="what" id="name-text">what will <br>Default do?</div></div>
+            <div class="right">
+                <div class="opts" id="fight" onclick="fight()">Fight</div>
+                <div class="opts" id="bag" onclick="bag()">Bag</div>
+                <div class="opts" id="Switch" onclick="info()">Info</div>
+                <div class="opts" id="run" onclick="run()">run</div>
+            </div>
+        </div>
+
+        <!--OVERLAYS-->
+        <div class="fight-overlay" id="fov">
+            <div class="whole">
+                <div class="opts" id="move1" onclick="">Left on Read</div>
+                <div class="opts" id="move2" onclick="">Sit on Face</div>
+                <div class="opts" id="move3" onclick="">Fake Sleep</div>
+                <div class="opts" id="move4" onclick="">mirror selfie</div>
+            </div> 
+            <div class="close" onclick="closed()">x</div>
+        </div>
+
+
+    </div>
+
+    <script src="game-logic.js"></script>
+    
+</body>
+</html>

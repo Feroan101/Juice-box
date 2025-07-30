@@ -1,40 +1,73 @@
-let attempt = 0;
 
-function forget(){
-    let item = document.getElementById("forget");
-    item.innerHTML = "HINT: What would your name feel like on a <em>flip phone</em>?";
-    item.style.textAlign = "center"
+let currentPage = 0;
+const pages = document.querySelectorAll(".page");
 
-    item.style.cursor = "text";
-};
-
-function submit(){
-    let name = document.getElementById("username").value
-    let pass = document.getElementById("pass").value
-
-    if (name == ""){
-        document.getElementById("waste").innerHTML = "<b>Enter Your Name</b>"
-    }
-
-    else if (pass !== "7474"){
-        let waste = document.getElementById("waste")
-        attempt += 1;
-        waste.innerHTML = 'Wrong Password';
-        document.getElementById("pass").value = "";
-
-        if (attempt >= 5){
-            waste.style.color = "black";
-            waste.innerHTML = "how did you not figure this out "  + name + "? <br>There are clues all over the Webpage";
-        }
-
-        if (attempt >=10){
-            waste.style.color = "black";
-            waste.innerHTML = 'OMG STOP TRYING <br> Just ask <a style="color: blueviolet; cursor: pointer;font-family: "Quicksand", sans-serif; margin: 0;" href="https://www.instagram.com/feroan.xo/">me</a> ffs';
-        } 
-    }
-    else{
-        localStorage.setItem("attempt", attempt);
-        window.location.href = "actual.html";   
-    }
+function nextPage() {
+  pages[currentPage].classList.remove("active");
+  currentPage++;
+  if (currentPage < pages.length) {
+    pages[currentPage].classList.add("active");
+  }
 }
 
+const quizData = [
+  {
+    question: "What’s his go-to comfort food?",
+    options: ["Maggi", "Chicken roll", "Paneer tikka", "Anything with cheese, tbh"],
+    answer: "Anything with cheese, tbh"
+  },
+  {
+    question: "What’s the weirdest thing he’s done at 2am?",
+    options: ["Made a website for you", "Slept on a Discord call", "Ordered shampoo on Swiggy", "All of the above"],
+    answer: "All of the above"
+  },
+  {
+    question: "If he had to teleport to one place right now, where would he go?",
+    options: ["His bed", "Mars", "Your arms", "Whatever's closest to pani puri"],
+    answer: "Your arms"
+  },
+  {
+    question: "What’s the one thing he always says after being dumb?",
+    options: ["Trust the process", "Shut up, it worked didn’t it", "You still love me tho", "...oops"],
+    answer: "You still love me tho"
+  },
+  {
+    question: "What song makes him think of you?",
+    options: ["Until I Found You", "Teenage Dream", "No one. Just you humming", "Whichever one’s stuck in his head at 3am"],
+    answer: "No one. Just you humming"
+  }
+];
+
+
+function loadQuiz() {
+  const container = document.getElementById("quiz-container");
+  quizData.forEach((q, i) => {
+    const qBlock = document.createElement("div");
+    qBlock.innerHTML = `<p><strong>${q.question}</strong></p>` + q.options.map(opt => `
+      <label><input type="radio" name="q${i}" value="${opt}"> ${opt}</label><br>
+    `).join("");
+    container.appendChild(qBlock);
+  });
+}
+
+function submitQuiz() {
+  let score = 0;
+  quizData.forEach((q, i) => {
+    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if (selected && selected.value === q.answer) {
+      score++;
+    }
+  });
+
+  const result = document.getElementById("quiz-result");
+  if (score === quizData.length) {
+    result.innerText = `Perfect score! You know me *way* too well.`;
+  } else if (score >= 3) {
+    result.innerText = `You got ${score}/${quizData.length}. Not bad, specialist!`;
+  } else {
+    result.innerText = `You got ${score}/${quizData.length}... we need to talk.`;
+  }
+}
+
+
+window.onload = loadQuiz;

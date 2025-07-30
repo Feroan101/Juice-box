@@ -1,114 +1,70 @@
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; 
-    width: 100vw;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    background-color: rgb(147, 147, 212);
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fdf0f3, #fcbad3);
+  color: #333;
+  min-height: 100vh;
 }
 
-.video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
-.card .foot{
-    justify-self: flex-end;
+.btn-pink {
+  background-color: #ff7eb9;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-h1{
-    font-family: 'Great Vibes', cursive;
-    color: #333;
+.btn-pink:hover {
+  background-color: #ff5599;
+  transform: scale(1.05);
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    box-sizing: border-box;
-    padding: 1.5rem 2rem;
-    margin: 1rem auto;
-    width: 90vw;
-    max-width: 400px;
-    height: auto;
+.card {
+  background-color: #fff0f6;
+  border: none;
+  border-radius: 10px;
 }
 
-.card h2{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    color: #5e5b9d;
-    margin-bottom: 0.5rem;
+.container:not(.navbar .container) {
+  padding-bottom: 50px;
 }
 
-.card p{
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
-    text-align: center;
+.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+
 }
 
-.card a{
-    font-family: 'Share Tech Mono', monospace;
-    align-self: center;
-    font-size: 1rem;
-    color:#5e5b9d;
-    margin-bottom: 8px;
-    cursor: pointer;
+.pretty-heading {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  color: #d63384; /* a romantic pinkish-purple */
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px #f8d7e7;
 }
 
-.card .inp{
-    font-family: 'Quicksand', sans-serif;
-    border: none;
-    border-radius: 12px;
-    padding: 10px;
-    width: 100%; /* take full width of parent */
-    max-width: 280px; /* don't exceed this */
-    height: 40px;
-    margin: 10px auto; /* center horizontally */
-    display: block;
-    box-sizing: border-box;
+
+
+.btn-pink {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.card button{
-    font-family: 'Poppins', sans-serif;
-    background: #b095f6;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 999px;
-    font-weight: bold;
-    color: #fff;
-    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.15);
-    cursor: pointer;
-    transition: background 0.3 ease;
-}
-
-.card button:hover{
-    background: #d0bfff;
-}
-
-#waste{
-    margin: 5px;
-    color: red;
-    font-family: 'Quicksand', sans-serif;
-}
-
-@media (max-width: 600px) {
-  #waste {
-    font-size: 0.8rem;
-  }
+.btn-pink:hover {
+  background-color: #ff85c1;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
 }
